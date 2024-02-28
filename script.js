@@ -32,3 +32,15 @@ console.log("Action Movies", actionMovies);
 // **Filtering Movies by Year:**
 let movieByYear = movies.filter((item) => item.year === 2000)
 console.log("Movies of year 2000", movieByYear);
+
+
+// **Calculating Average Rating:**
+
+function calculateAverageRating(movies) {
+    let totalRating = movies.reduce((total, movie) => total + movie.rating, 0);
+    let avgRating = totalRating / movies.length;
+    return avgRating
+}
+const avgRating = calculateAverageRating(movies)
+console.log("Average rating", avgRating);
+
